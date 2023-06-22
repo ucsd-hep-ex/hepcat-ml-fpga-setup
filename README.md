@@ -66,5 +66,19 @@ curl micro.mamba.pm/install.sh | bash
 ## 4. Python environment
 
 ```bash
+git clone https://github.com/fastmachinelearning/hls4ml-tutorial
+cd hls4ml-tutorial
+micromamba create -f environment.yml
+```
 
+
+## N+1. Set up (each time you log in)
+
+```bash
+source /tools/Xilinx/Vivado/2020.1/setttings.sh
+
+export XILINXD_LICENSE_FILE=2100@cselm2.ucsd.edu
+export LM_LICENSE_FILE=2100@cselm2.ucsd.edu
+
+micromamba activate hls4ml-tutorial
 ```
