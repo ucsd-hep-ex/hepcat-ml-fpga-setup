@@ -46,6 +46,9 @@ After installing Vivado, change `/etc/os-version/` back to how it was!
 sudo cp /etc/os-version.bak /etc/os-version
 ```
 
+Patch Vivado for the y2k22 bug. See https://support.xilinx.com/s/article/76960?language=en_US
+
+
 ## 2. PYNQ-Z2 board files
 
 Now install PYNQ-Z2 board files.
