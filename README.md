@@ -1,5 +1,12 @@
 # hepcat-ml-fpga-setup
 
+## 0. Prereqs
+
+Install some prerequisites.
+```bash
+sudo apt install libtinfo5 git
+```
+
 ## 1. Vivado
 
 Download Vivado 2020.1.
@@ -41,9 +48,8 @@ sudo cp /etc/os-version.bak /etc/os-version
 
 ## 2. PYNQ-Z2 board files
 
-Now install PYNQ-Z2 board files. May need git first.
+Now install PYNQ-Z2 board files.
 ```bash
-sudo apt install git
 git clone https://github.com/Xilinx/XilinxBoardStore/
 sudo cp -r XilinxBoardStore/boards/TUL/pynq-z2 /tools/Xilinx/Vivado/2020.1/data/boards/board_files/
 rm -rf XilinxBoardStore
