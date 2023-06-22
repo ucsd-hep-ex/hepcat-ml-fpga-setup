@@ -4,7 +4,7 @@
 
 Install some prerequisites.
 ```bash
-sudo apt install libtinfo5 git curl
+sudo apt install libtinfo5 git curl build-essential
 ```
 
 ## 1. Vivado
