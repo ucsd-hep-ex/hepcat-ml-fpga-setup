@@ -1,12 +1,12 @@
 # hepcat-ml-fpga-setup
 
-## Vivado
+## 1. Vivado
 
 Download Vivado 2020.1.
 - Archive: https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html
 - Direct download link: https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Unified_2020.1_0602_1208_Lin64.bin
 
-Following instructions from (https://danielmangum.com/posts/vivado-2020-x-ubuntu-20-04/), we need to make it "spoof" 18.04 by changing one line in `/etc/os-version` from
+Following instructions from https://danielmangum.com/posts/vivado-2020-x-ubuntu-20-04/, we need to "spoof" 18.04 by changing one line in `/etc/os-version` from
 ```
 VERSION="20.04.6 LTS (Focal Fossa)"
 ```
@@ -14,9 +14,7 @@ to
 ```
 VERSION="18.04.4 LTS (Bionic Beaver)"
 ```
-as follows
-
-
+This can be done as follows:
 ```bash
 sudo cp /etc/os-version /etc/os-version.bak
 sudo sed -i 's/VERSION="20.04.6 LTS (Focal Fossa)"/VERSION="18.04.4 LTS (Bionic Beaver)"/g' /etc/os-version
@@ -39,4 +37,27 @@ After installing Vivado, change `/etc/os-version/` back to how it was!
 
 ```bash
 sudo cp /etc/os-version.bak /etc/os-version
+```
+
+## 2. PYNQ-Z2 board files
+
+Now install PYNQ-Z2 board files.
+```bash
+git clone https://github.com/Xilinx/XilinxBoardStore/
+sudo cp -r XilinxBoardStore/boards/TUL/pynq-z2 /tools/Xilinx/Vivado/2020.1/data/boards/board_files/
+rm -rf XilinxBoardStore
+```
+
+## 3. Micromamba
+
+Install `micromamba` following https://mamba.readthedocs.io/en/latest/installation.html
+
+```bash
+curl micro.mamba.pm/install.sh | bash
+```
+
+## 4. Python environment
+
+```bash
+
 ```
