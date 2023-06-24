@@ -34,9 +34,7 @@ cd ~/Downloads
 chmod +x Xilinx_Unified_2020.1_0602_1208_Lin64.bin && sudo ./Xilinx_Unified_2020.1_0602_1208_Lin64.bin
 ```
 
-You will need to log in with a Xilinx username/password. Here are my credentials:
-- Username: `jduarte@ucsd.edu`
-- Password: `yi6thet@VED`
+You will need to log in with a Xilinx username/password.
 
 Keep all the default settings and press continue until it starts downloading/installing.
 
@@ -61,7 +59,7 @@ exit
 
 ## 2. PYNQ-Z2 board files
 
-Now install PYNQ-Z2 board files.
+Now install the PYNQ-Z2 board files.
 ```bash
 git clone https://github.com/Xilinx/XilinxBoardStore/
 sudo cp -r XilinxBoardStore/boards/TUL/pynq-z2 /tools/Xilinx/Vivado/2020.1/data/boards/board_files/
